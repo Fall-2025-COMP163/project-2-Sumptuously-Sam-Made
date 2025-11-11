@@ -279,7 +279,7 @@ class Weapon:
         Display information about this weapon.
         """
         # TODO: Print weapon name and damage bonus
-        print(f"Weapon: {self.weapon_name}\nDamage Bonus: {self.damage_bonus})")
+        print(f"Weapon: {self.name}\nDamage Bonus: {self.damage_bonus})")
 
 
 # ============================================================================
