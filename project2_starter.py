@@ -5,10 +5,10 @@ Date: 11/9/2025
 
 AI Usage: [Document any AI assistance used]
 Example: AI helped with inheritance structure and method overriding concepts
-Ai helped me figure out more about the super.__init__ call
+AI helped me figure out more about the super.__init__ call
 """
-import random
 
+import random
 
 # ============================================================================
 # PROVIDED BATTLE SYSTEM (DO NOT MODIFY)
@@ -257,7 +257,73 @@ class Rogue(Player):
         # Should always do critical damage
         target.take_damage((self.strength * 2.1))
 
+class Alchemist(Player):
+    """
+    Alchemist class - Alchemic User.
+    Inherits from Player.
+    """
 
+    def __init__(self, name):
+        """
+        Create an alchemist with appropriate stats.
+        Alchemists should have: med health, low strength, med magic
+        """
+        # TODO: Call super().__init__() with alchemist-appropriate stats
+        # Suggested stats: health=120, strength=9, magic=14
+        super().__init__(name, "Alchemist", 120, 9, 14)
+
+
+    def attack(self, target):
+        """
+        Override the basic attack to make it magic/strength based.
+        Alchemist should use magic and strength.
+        """
+        # TODO: Implement alchemist attack
+        # Should use self.magic and self.strentgh for calculation
+        target.take_damage((self.magic + self.strength)*0.75)
+
+
+    def splash_potion(self, target):
+        """
+        Special alchemist ability - a powerful potion attack.
+        """
+        # TODO: Implement splash potion effect
+        # Should do magic/strength-based damage with bonus
+        target.take_damage((self.magic + self.strength) + target.health * 0.3)
+
+class Bard(Player):
+    """
+    Bard class - Music player.
+    Inherits from Player.
+    """
+
+    def __init__(self, name):
+        """
+        Create an  bard with appropriate stats.
+        Bards should have: low health, low strength, low magic
+        """
+        # TODO: Call super().__init__() with bard-appropriate stats
+        # Suggested stats: health=75, strength=7, magic=6
+        super().__init__(name, "Bard", 75, 7, 6)
+
+
+    def attack(self, target):
+        """
+        Override the basic attack to make it health based.
+        Bard should use health.
+        """
+        # TODO: Implement healing attack
+        # Should use health for calculation
+        target.take_damage(-(targer.health * 0.8))
+
+
+    def powerful_poem(self, target):
+        """
+        Special bard ability - a symphony of the winds.
+        """
+        # TODO: Implement powerful poem
+        # Should do health-based damage with bonus
+        target.take_damage(-(targer.health * 0.8)- 6)
 
 class Weapon:
     """
