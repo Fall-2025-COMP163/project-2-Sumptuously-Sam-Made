@@ -5,7 +5,11 @@ Date: 11/9/2025
 
 AI Usage: [Document any AI assistance used]
 Example: AI helped with inheritance structure and method overriding concepts
-AI helped me figure out more about the super.__init__ call
+- AI helped me figure out how to use enumerate
+- AI helped me used th super().__init__ call
+- AI helped me understand the order of operations for class calls
+- AI gave me examples of attributes for references
+
 """
 
 import random
