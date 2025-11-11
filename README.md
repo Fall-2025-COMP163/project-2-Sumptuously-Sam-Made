@@ -142,6 +142,20 @@ battle.fight()  # Simulates a simple battle
 ## 🎨 Bonus Creative Elements
 
 Feel free to add your own creative touches for bonus points:
-- Additional character classes beyond the three required
+- >> Additional character classes beyond the three required << (I created the alchemist and bard class that use unique methods to call the class and function provided)
 - More weapon types with different properties
 - Enhanced special abilities with unique effects
+
+## AI Usage
+- AI helped me figure out how to use enumerate
+- AI helped me used th super().__init__ call
+- AI helped me understand the order of operations for class calls
+- AI gave me examples of attributes for references
+
+## How to Run
+- First, create a character type using Warrior, Rogue, Alchemist, etc.
+- Second, display the stats using (character_variable).display_stats
+- Third, make a test dummy as a character using character class + required parameters and test it for your character's .attack method
+- Fourth, use a target and (character_type).(special_ability) to test power of them
+- Fifth, call weapons with the first argument being the weapon name and second being the damage boost, then display using .display.info()
+- Sixth, call SimpleBattle class two characters as arguments, then call the .fight() function within it
