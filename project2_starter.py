@@ -214,7 +214,7 @@ class Mage(Player):
         """
         # TODO: Implement fireball spell
         # Should do magic-based damage with bonus
-        target.take_damage((self.magic * 1.75) + 20)
+        target.take_damage((self.magic * 1.75) + 15)
 
 
 
@@ -270,7 +270,7 @@ class Weapon:
         Create a weapon with a name and damage bonus.
         """
         # TODO: Store weapon name and damage bonus
-        self.weapon_name = name
+        self.name = name
         self.damage_bonus = damage_bonus
 
 
