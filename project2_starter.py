@@ -169,7 +169,7 @@ class Warrior(Player):
         # TODO: Implement warrior attack
         # Should do more damage than basic attack
         # Maybe strength + 5 bonus damage?
-        super().take_damage((self.strength * 1.2) + 5)
+        target.take_damage((self.strength * 1.2) + 5)
 
 
     def power_strike(self, target):
@@ -178,7 +178,7 @@ class Warrior(Player):
         """
         # TODO: Implement power strike
         # Should do significantly more damage than regular attack
-        super().take_damage((self.strength * 1.2) + 15)
+        target.take_damage((self.strength * 1.2) + 15)
 
 
 
@@ -205,7 +205,7 @@ class Mage(Player):
         """
         # TODO: Implement mage attack
         # Should use self.magic for damage calculation instead of strength
-        super().take_damage((self.magic * 1.75))
+        target.take_damage((self.magic * 1.75))
 
 
     def fireball(self, target):
@@ -214,7 +214,7 @@ class Mage(Player):
         """
         # TODO: Implement fireball spell
         # Should do magic-based damage with bonus
-        super().take_damage((self.magic * 1.75) + 20)
+        target.take_damage((self.magic * 1.75) + 20)
 
 
 
@@ -244,9 +244,9 @@ class Rogue(Player):
         # Hint: use random.randint(1, 10) and if result <= 3, it's a crit
         ran_num = random.randint(1, 10)
         if ran_num <= 3:
-            super().take_damage((self.strength * 2.1))
+            target.take_damage((self.strength * 2.1))
         else:
-            super().take_damage((self.strength * 1.3))
+            target.take_damage((self.strength * 1.3))
 
 
     def sneak_attack(self, target):
@@ -255,7 +255,7 @@ class Rogue(Player):
         """
         # TODO: Implement sneak attack
         # Should always do critical damage
-        super().take_damage((self.strength * 2.1))
+        target.take_damage((self.strength * 2.1))
 
 
 
